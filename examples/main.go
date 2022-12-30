@@ -24,9 +24,9 @@ func Foo(optionsVariableParams ...FooOptions) {
 func main() {
 
 	// 不传递参数
-	Foo()
+	Foo() // Output: default foo
 
 	// 传递参数
-	Foo(FooOptions{Foo: "custom foo"})
+	Foo(FooOptions{Foo: "custom foo"}) // Output: custom foo
 
 }

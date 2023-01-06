@@ -18,3 +18,11 @@ func TakeFirstParamOrDefault[T any](parameters []T, defaultValue T) T {
 		return defaultValue
 	}
 }
+
+func TakeFirstParamOrDefaultFunc[T any](parameters []T, defaultValueFunc func() T) T {
+	if len(parameters) > 0 {
+		return parameters[0]
+	} else {
+		return defaultValueFunc()
+	}
+}

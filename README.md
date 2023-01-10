@@ -133,7 +133,7 @@ func Foo(options ...*FooOptions) {
 	// 如果没有传递参数的话，则设置一个默认的参数
 	options = variable_parameter.SetDefaultParam(options, DefaultFooOptions)
 
-	// 为什么不适用这种方式来操作呢？也许这样更简单？
+	// 为什么不使用这种方式来操作呢？也许这样更简单？
 	// 在递归互相调用的时候切片中可能会被重复放入默认值，尤其是在有很多的重载之类的或者高内聚的代码中会互相调用问题尤其明显
 	//options = append(options, DefaultFooOptions)
 
@@ -150,7 +150,6 @@ func main() {
 	Foo() // Output: default foo
 
 }
-
 ```
 
 
